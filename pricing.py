@@ -7,4 +7,4 @@ def discounted_cents(cents: int, percent: int) -> int:
         raise ValueError("cents must be non-negative")
     if not 0 <= percent <= 100:
         raise ValueError("percent must be between 0 and 100")
-    return int(cents * (100 - percent) / 100)
+    return (cents * (100 - percent) + 50) // 100
